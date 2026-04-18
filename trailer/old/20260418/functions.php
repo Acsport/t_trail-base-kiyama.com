@@ -390,18 +390,6 @@ function custom_pagination($query = null) {
       echo '</div>';
   }
 }
-// CF7　datepickerを有効化
-function enqueue_flatpickr_scripts() {
-    // flatpickr 本体
-    wp_enqueue_script('flatpickr', 'https://cdn.jsdelivr.net/npm/flatpickr', array(), null, true);
-
-    // flatpickr 日本語ローカル（flatpickr より後に読み込む）
-    wp_enqueue_script('flatpickr-ja', 'https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ja.js', array('flatpickr'), null, true);
-
-    // flatpickr ダークテーマ（必要に応じて）
-    wp_enqueue_style('flatpickr-dark', 'https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/dark.css');
-}
-add_action('wp_enqueue_scripts', 'enqueue_flatpickr_scripts');
 /********************************
 
     出力関係

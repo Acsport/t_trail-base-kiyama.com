@@ -300,16 +300,16 @@
 
 #service .sec01 .topBox h2 {
 	float: left;
-	width: 50%;
+	width: 45%;
 	color: #f5f5f5;
 	font-family: 'Outfit';
-	font-size: 5em;
+	font-size: 4.5em;
 	letter-spacing: 0.1em;
 }
 #service .sec01 .topBox .imgTxtBox {
 	float: left;
 	padding: 42px 0px 0 0;
-	width: 40%;
+	width: 50%;
 	transition: 1.2s cubic-bezier(0.165, 0.84, 0.44, 1);
 	max-width: 550px;
 	/* width: fit-content; */
@@ -320,6 +320,11 @@
 	font-weight: bold;
 	margin-top: 60px;
 	vertical-align: middle;
+}
+
+#service .sec01 .topBox .imgTxtBox span.sub_ttl {
+    font-size: 0.6em;
+    margin-left: 1em;
 }
 #service .sec01 .topBox .imgTxtBox .imgTxt_item {
 	margin-top: 13px;
@@ -5961,42 +5966,6 @@ span.wpcf7-character-count.down {
     margin-left: 3em;
 	color: #888;
 }
-
-/* ============================================
-	フォーム幅統一修正（レスポンシブ完全対応版）
-   ============================================ */
-
-/* PC・タブレット：入力エリアのPタグが残余幅を占有する */
-.Form-Item > p:not(.Form-Item-Label) {
-	flex: 1 1 auto;
-	min-width: 0;
-}
-
-/* wpcf7-form-control-wrap を全幅に */
-.Form-Item > p:not(.Form-Item-Label) .wpcf7-form-control-wrap {
-	display: flex;
-	width: 100%;
-}
-
-/* ----------------------------------------
-	480px以下：縦積みレイアウト対応
-   ---------------------------------------- */
-@media screen and (max-width: 480px) {
-  /* Pタグを次の行で全幅表示（flex-wrap:wrapで折り返した後に全幅を取る） */
-	.Form-Item > p:not(.Form-Item-Label) {
-		flex: 0 0 100%;
-		width: 100%;
-		min-width: 0;
-	}
-
-  /* input / select も全幅に */
-	.Form-Item-Input {
-		width: 100%;
-		max-width: 100%;
-		box-sizing: border-box;
-	}
-}
-
 /*------------
 
  Download

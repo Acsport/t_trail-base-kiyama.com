@@ -1,0 +1,142 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*----------
+
+    page_model
+
+--------------*/
+.page_model_box {
+    background: #f5f5f5;
+    margin-top: -50px;
+    background-image: url(../images/top_modelhouse_bg_pc_1920.png);
+    height: 80vh;
+	background-repeat:no-repeat;
+    background-size: inherit;
+}
+
+.page_model_box .textBox {
+    position: relative;
+    /* left: 50%; */
+    text-align: left;
+	top:4vh;
+    width: 45%;
+    margin-left: 50%;
+    margin-right: -20px;
+}
+
+.page_model_box .textBox h2.headLine01{
+    text-align:left;
+}
+
+.page_model_box .textBox h2.headLine01 .en{
+    color:#FFF;
+    font-size:3em;
+    margin-bottom: 0;
+    letter-spacing: 0.2;
+}
+.page_model_box .textBox h2.headLine01 .jp{
+    color:#FFF;
+    font-size: 1.5em;
+}
+.page_model_box .textBox .text01{
+    color:#FFF; 
+	width:90%;
+    max-width:600px;
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+.page_model_box .btn_white a {
+    margin: 0;
+}
+
+@media all and (max-width: 1400px) {
+
+.page_model_box {
+    background-image: url(../images/top_modelhouse_bg_pc1300.jpg);
+    height: 80vh;
+}
+.page_model_box .textBox h2.headLine01 .jp{
+    font-size: 1.2em;
+}
+.page_model_box .textBox .text01{
+	width:90%;
+    max-width:450px;
+	font-size: 0.9em;
+	margin-bottom: 20px;
+}
+}
+
+@media all and (max-width: 1165px) {
+.page_model_box {
+    height: 70vh;
+}
+.page_model_box .textBox {
+	top:3vh;
+    width: 85%;
+	max-width:800px;
+	margin:0 auto;
+	
+}
+.page_model_box .textBox h2.headLine01 .en{
+    text-align:center;
+}
+.page_model_box .textBox h2.headLine01 .jp{
+    font-size: 1.2em;
+    text-align:center;
+}
+.page_model_box .textBox .text01{
+    text-align:left;
+	margin:0 auto 10px;
+	max-width:500px;
+	font-size:0.8em;
+}
+	.page_model_box .btn_white a {
+    margin: 0 auto;
+}
+}
+
+@media all and (max-width: 768px) {
+.page_model_box {
+    background-image: url(../images/top_modelhouse_bg_sp.png);
+    height: 60vh;
+}
+.page_model_box .textBox {
+	top:2vh;
+	margin:0 auto ;
+    width: 90%;
+	
+}
+
+.page_model_box .textBox h2.headLine01 .jp{
+    font-size: 1.5em;
+    text-align:center;
+}
+.page_model_box .textBox .text01{
+	max-width:500px;
+	width:90%;
+	font-size:1em;
+    margin: 0 auto 10px;
+}
+	.page_model_box .btn_white a {
+    margin: 0 auto;
+}
+}
+
+@media all and (max-width: 468px) {
+.page_model_box {
+    height: 40vh;
+}
+.page_model_box .textBox {
+    width: 100%;
+}
+
+.page_model_box .textBox h2.headLine01 .jp{
+    font-size: 1.5em;
+    text-align:center;
+}
+.page_model_box .textBox .text01{
+	font-size:0.8em;
+}
+}
+

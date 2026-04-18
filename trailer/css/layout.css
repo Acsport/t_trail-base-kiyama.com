@@ -5794,10 +5794,13 @@ select#select-title {
 .Form-Item-check {
   /* margin-left: 0px; */
   text-indent: 40px;
-  height: 48px;
+  /* height: 48px; */
   width: 100%;
   max-width: 600px;
   font-size: 18px;
+}
+.Form-Item-check .wpcf7-list-item{
+	display: block;
 }
 .Form-Item-Textarea {
   border: 1px solid #ddd;
@@ -5875,7 +5878,7 @@ select#select-title {
   max-width: 400px;
   font-size: 16px;
 }
-	#select-title {
+select#select-title {
   margin-left: 10px;
   max-width: 400px;
   font-size: 16px;
@@ -5888,7 +5891,8 @@ select#select-title {
 
 
 }
-@media screen and (max-width: 480px) {
+/* (max-width: 480px) から変更*/
+@media screen and (max-width: 620px) {
 	.Form {
 	margin-top: 40px;
 	}
@@ -5918,13 +5922,15 @@ select#select-title {
 	.Form-Item-Input {
 	margin-left: 0;
 	margin-top: 18px;
+	max-width: 600px;
 	height: 40px;
 	flex: inherit;
 	font-size: 15px;
 	}
-	#select-title {
+	select#select-title {
 	margin-left: 0;
 	margin-top: 18px;
+	max-width: 600px;
 	height: 40px;
 	flex: inherit;
 	font-size: 15px;
@@ -5932,6 +5938,7 @@ select#select-title {
 	.Form-Item-Textarea {
 	margin-top: 18px;
 	margin-left: 0;
+	max-width: 600px;
 	height: 200px;
 	flex: inherit;
 	font-size: 15px;
@@ -5965,6 +5972,41 @@ select#select-title {
 span.wpcf7-character-count.down {
     margin-left: 3em;
 	color: #888;
+}
+
+/* ============================================
+	フォーム幅統一修正（レスポンシブ完全対応版）
+   ============================================ */
+
+/* PC・タブレット：入力エリアのPタグが残余幅を占有する */
+.Form-Item > p:not(.Form-Item-Label) {
+	flex: 1 1 auto;
+	min-width: 0;
+}
+
+/* wpcf7-form-control-wrap を全幅に */
+.Form-Item > p:not(.Form-Item-Label) .wpcf7-form-control-wrap {
+	display: flex;
+	width: 100%;
+}
+
+/* ----------------------------------------
+	480px以下：縦積みレイアウト対応
+   ---------------------------------------- */
+@media screen and (max-width: 480px) {
+  /* Pタグを次の行で全幅表示（flex-wrap:wrapで折り返した後に全幅を取る） */
+	.Form-Item > p:not(.Form-Item-Label) {
+		flex: 0 0 100%;
+		width: 100%;
+		min-width: 0;
+	}
+
+  /* input / select も全幅に */
+	.Form-Item-Input {
+		width: 100%;
+		max-width: 100%;
+		box-sizing: border-box;
+	}
 }
 /*------------
 

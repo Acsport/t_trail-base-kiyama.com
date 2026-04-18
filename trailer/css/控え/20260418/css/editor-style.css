@@ -1,0 +1,117 @@
+@charset "utf-8";
+/* 記事のスタイルCSS Document */
+
+
+.wp-block-area{}
+
+/*--見出し--*/
+
+.midashi_h_1{
+font-size: 1.5em;/* フォントサイズ */
+font-weight: bold;/* フォント太さ */   
+padding-top: .5em;
+padding-bottom: .5em;
+margin-bottom: 2em;
+border-bottom: solid 3px #111111;/* 線 */
+}
+
+.midashi_h_2{
+font-size: 1.5em;/* フォントサイズ */
+font-weight: bold;/* フォント太さ */   
+padding-top: .5em;
+padding-bottom: .5em;
+margin-bottom: 2em;
+border-bottom: double 5px #306A93;/* 線 */
+color:#306A93;/* フォント色 */
+}
+
+.midashi_h_3{
+font-size: 1.2em;/* フォントサイズ */
+font-weight: bold;/* フォント太さ */
+padding-top: .5em;
+padding-bottom: .5em;
+padding-left: .5em;
+margin-bottom: 2em;
+background-color: #ebf4f6;/* 背景色 */
+border-left: 5px solid #306A93;/* 左の線 */
+border-bottom: 2px solid #cccccc;/* 下の線 */
+color: #306A93;/* フォント色 */
+}
+
+.midashi_h_4{
+font-size: 1.2em;/* フォントサイズ */
+font-weight: bold;/* フォント太さ */
+padding-top: .5em;
+padding-bottom: .5em;
+margin-bottom: 2em;
+position: relative;
+border-bottom: solid 3px #e3e3e2;/* 線 */
+color: #306A93;/* フォント色 */
+}
+
+.midashi_h_5{
+font-size: 1.1em;/* フォントサイズ */
+font-weight: bold;/* フォント太さ */
+padding-top: .5em;
+padding-bottom: .5em;
+padding-left: 1.4em;
+margin-bottom: 2em;
+position: relative;
+line-height: 1.4;
+color:#306A93;/*フォント色*/
+}
+
+.midashi_h_5:before {
+position: absolute;
+font-family: "Font Awesome 5 Free";
+content: "\f00c";
+font-weight: 900;
+font-size: 1em;
+left: 0;
+top: 0.5em;
+color: #306A93;
+}
+
+.midashi_h_6{
+font-size: 1.1em;/* フォントサイズ */
+font-weight: bold;/* フォント太さ */
+padding: .5em .7em;
+margin-bottom: 2em;
+position: relative;
+background-color: #e0ebe2;/* 背景色 */
+border-left: solid 2em #306A93;/* 線 */
+box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);/* 影 */
+color: #306A93;/* フォント色 */
+}
+
+.midashi_h_6:before {
+position: absolute;
+content: "\f303";
+font-family: "Font Awesome 5 Free";
+padding: 0em;
+font-weight: 900;
+left: -1.5em;
+top: 50%;
+-webkit-transform: translateY(-50%);
+transform: translateY(-50%);
+color: #ffffff;
+}
+
+/*--本文--*/
+
+/* reCAPTCHAバッジを非表示にする */
+body .grecaptcha-badge {
+    visibility: hidden !important;
+}
+
+
+.reCAPTCHA-txt p{
+	text-align:center;
+	font-size:0.8em;
+	margin-top:20px;
+}
+
+.reCAPTCHA-txt a{	
+	text-decoration:underline;
+
+}

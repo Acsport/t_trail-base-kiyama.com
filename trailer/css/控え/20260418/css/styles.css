@@ -1,0 +1,449 @@
+@charset "utf-8";
+@@@{
+  font-family: 'Josefin Sans', sans-serif;
+font-family: 'Outfit', sans-serif;
+}
+
+.bnr_pc { display: block !important; }
+    .bnr_sp { isplay: none !important;  }
+		
+		
+@media only screen and (max-width: 468px) {
+.bnr_pc { display: none !important; }
+.bnr_sp { display: block !important; }
+}
+
+.bnr_pc:hover {
+	opacity:0.5;
+	transition: 0.5s
+}
+
+.bnr_pc {
+	position: fixed;
+	top: 90px;
+	right: -5px;
+	z-index: 2;
+	width: 68px;
+}
+.bnr_sp{
+	display:none;
+	position: fixed;
+	bottom:0;
+	width: 100%;
+	z-index: 2;	
+}
+@media all and (max-width: 1024px) {
+	.bnr_sp{
+		
+position: fixed;
+	bottom:0;
+		right:0px;
+width: 50%;		
+z-index: 2;
+}
+}
+
+@media all and (max-width: 1440px) {
+	.bnr_pc {
+		right: 0%;
+	}
+}
+@media all and (max-width: 1024px) {
+	.bnr_pc {
+		display:none;
+		position: fixed;
+		right: 0%;
+	}
+}
+
+/*bnr2*/
+
+.bnr2_pc { display: block !important; }
+.bnr2_sp { isplay: none !important;  }
+		
+		
+@media only screen and (max-width: 468px) {
+.bnr2_pc { display: none !important; }
+.bnr2_sp { display: block !important; }
+}
+
+.bnr2_pc:hover {
+	opacity:0.5;
+	transition: 0.5s
+}
+
+.bnr2_pc {
+	position: fixed;
+	top: 310px;
+	right: -5px;
+	z-index: 2;
+	width: 68px;
+}
+.bnr2_sp{
+	display:none;
+	position: fixed;
+	bottom:0;
+	z-index: 2;	
+}
+@media all and (max-width: 1024px) {
+	.bnr2_sp{
+		
+	position: fixed;
+	bottom:0;
+	width: 50%;
+	z-index: 2;	
+}
+}
+
+@media all and (max-width: 1440px) {
+	.bnr2_pc {
+		right: 0%;
+	}
+}
+@media all and (max-width: 1024px) {
+	.bnr2_pc {
+		display:none;
+		position: fixed;
+		right: 0%;
+	}
+}
+.pageBnr {
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+}
+/*-------------------------------
+
+         パンくずリスト
+
+----------------------------------*/
+
+
+.Breadcrumb {
+  padding: 1em;
+}
+.Breadcrumb-ListGroup {
+  display: flex;
+}
+.Breadcrumb-ListGroup-Item-Link[href]:hover {
+  opacity: 0.5;
+}
+.Breadcrumb-ListGroup > * + * {
+  margin-left: 0.5em;
+}
+.Breadcrumb-ListGroup > * + *::before {
+  content: ">";
+  margin-left: 0.75em;
+  margin-right: 0.75em;
+}
+
+
+/*-------------------------------
+
+         ボタン
+
+----------------------------------*/
+
+/*
+黒い予約ボタン
+*/
+.Reservet{
+
+
+}
+
+
+
+#Maodel .Block2{
+	width:90%;
+	margin:6em auto 6em;
+	text-align:center;
+}
+.Reservet a{
+	border: solid 1px #000;
+	background: #000;
+	color:#FFF;
+	transition: 1.0s;
+	width:90%;
+	max-width:700px;
+	display:block;
+	text-align:center;
+	padding:20px 40px 20px 0;
+	margin:3em auto;
+	font-size:max(1.042vw,20px);
+	position: relative;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+
+
+.Reservet a::before{
+	content:"";
+	position: absolute;
+	top:47%;
+	right:50px;
+	width:40px;
+	height:1px;
+	background:#FFF;
+	transition: all .2s linear;
+}
+
+.Reservet a::after{
+	content:"";
+	position: absolute;
+	top:30%;
+	right:56px;
+	width:2px;
+	height:12px;
+	background:#FFF;
+	transform:skewX(45deg);
+	transition: all .2s linear;
+}
+
+.Reservet a:hover{
+	border: solid 1px #006237;
+    background: #006237;
+}
+
+.Reservet a:hover::before{
+}
+
+.Reservet a:hover::after{
+
+}
+
+/* イベントボタン
+-----------------*/
+.EventBt a{
+	border: solid 1px #000;
+	background:#000;
+	color:#FFF;
+	transition: 1.0s ;
+        display: inline-block;
+	text-align:center;
+	padding:5px 20px;
+}
+
+.EventBt a:hover{
+	border: solid 1px #000;
+	background:#626262;
+}
+/*-------------------------------
+
+         MAP
+
+----------------------------------*/
+
+
+#Map {
+    margin: 6em auto;
+    overflow: hidden;
+    width: 95%;
+	max-width:1000px;
+}
+
+
+
+/*-------------------------------
+
+        イベント下バナー　エリアワード
+
+----------------------------------*/
+
+.area-word {
+    position: relative;
+    margin: 3em auto 0;
+    padding: 1em 2.5em 1em 1.5em;
+    border-radius: 3px;
+    box-shadow: 0 2px 3px rgb(0 0 0 / 20%);
+    background-color: #f1f4f6;
+    color: #333333;
+    font-weight:600;
+    font-size:1em;
+    letter-spacing:0.05em;
+    line-height:1.8em;
+}
+
+.area-word::before,
+.area-word::after {
+    position: absolute;
+    content: '';
+}
+
+.area-word::before {
+    top: -15px;
+    right: 10px;
+    height: 50px;
+    width: 15px;
+    border: 3px solid #999;
+    border-radius: 10px;
+    box-shadow: 1px 1px 2px rgb(0 0 0 / 30%);
+    transform: rotate(10deg);
+}
+
+.area-word::after {
+    top: 0;
+    width: 10px;
+    right: 20px;
+    border: solid 5px #f1f4f6;
+}
+/*-------------------------------
+
+        イベント下バナー　プレゼント
+
+----------------------------------*/
+
+.Present{
+	margin:3em auto 0em auto;
+}
+.Present .ItemWorp{
+        width:80%;
+}
+
+.Present .ItemWorp .Item{
+        width:100%;
+	border-bottom : solid 1px #FFF;
+	padding:10px 0 10px 0;
+}
+
+.Present .ItemWorp .Item:last-child{
+	border-bottom : solid 0px #FFF;
+}
+
+/*-------------------------------
+
+    カテゴリーカラー
+
+----------------------------------*/
+.btn_black {
+    background-color: #000;/*見学会*/
+}
+
+.btn_green {
+    background-color: #306A93;
+}
+
+
+.btn_enge {
+    background-color: #9b4b13;/*相談会*/
+}
+/*-------------------------------
+
+    ページナビ
+
+----------------------------------*/
+ul.PageNavi{
+	margin:6em auto 3em auto!important;
+}
+
+ul.PageNavi{
+	width:90%;
+	margin:6em auto 12em auto;
+    	display: -webkit-flex;
+        display: flex;
+        -js-display: flex;
+        flex-wrap:wrap;
+        justify-content: space-between;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+	border-bottom : solid 1px #eeeeee;
+	border-top : solid 1px #eeeeee;
+	padding:2em 0;
+}
+
+ul.PageNavi li{
+	margin:0 1%;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        font-size: max(12px, 1vw); 
+	line-height:18px;
+
+}
+
+ul.PageNavi li.next1{
+	width:150px;
+       font-size:max(0.729vw,14px);
+        order:1;
+}
+
+ul.PageNavi li.next1 span:before{
+	content:"<<";
+	text-indent:10px;
+}
+
+ul.PageNavi li.next2{
+	width:150px;
+       font-size:max(0.729vw,14px);
+        order:3;
+}
+ul.PageNavi li.next2 span:after{
+	content:">>";
+}
+
+ul.PageNavi li.All{
+	width:200xp;
+	margin-top:2em;
+        order:2;
+}
+
+ul.PageNavi li img{
+        width: auto;
+        height:100px;
+	margin:0px 0px 5px;
+    display: block;
+  object-fit: cover;
+}
+
+
+ul.PageNavi li.next a{
+	color:#000;
+	padding:5px 10px;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        display: block;
+	transition: all  0.3s ease;
+	font-weight:bold; 
+}
+
+ul.PageNavi li.All a{
+	color:#000!important;
+	padding: 10px 30px;
+	letter-spacing: 0.1em;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	display: block;
+	transition: all  0.3s ease;
+	border : solid 1px #000;
+	font-weight:bold;
+}
+
+ul.PageNavi li.next a:hover {
+	color: #B1A389;
+}
+
+ul.PageNavi li.All a:hover {
+	color: #fff;
+        background-color: rgba(67, 67, 67, .2);
+}
+.pager_wrap {
+  width: 100%;
+  padding: 15px 2% 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.pager_wrap .pager_btn {
+  font-size: 16px;
+  font-weight: normal;
+  background-color: #fff;
+  color: #333;
+  padding: 13px 17px 10px;
+  line-height: 100%;
+  border: 1px solid #333;
+  transition: 0.3s;
+}
+.pager_wrap .pager_btn:hover {
+  background-color: #333;
+  color: #fff;
+}

@@ -1,0 +1,675 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*==================================================
+メインスライダーのためのcss
+===================================*/
+#main_slider {
+    width: 100%;
+    height: 100vh;/*スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
+}
+
+
+#main_slider h2,
+.mainVisualBox h2{
+    position: absolute;
+    z-index: 2;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    font-size: 2vw;
+    letter-spacing: 0em;
+    text-transform: uppercase;
+    color: #fff;
+    text-shadow: 1px 2px 3px #222;
+    width: 100%;
+    max-width: 1200px;
+}
+
+#main_slider h3,
+.mainVisualBox h3{
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 20%;
+    transform: translate(-30%, -30%);
+    text-align: center;
+    font-size: 1vw;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #fff;
+    text-shadow: 1px 2px 3px #222;
+    width: 80%;
+    max-width: 1000px;
+}
+
+.mainVisualBox .main_icon {
+    position: absolute;
+    bottom: 2px;
+    right: 0;
+    max-width: 600px;
+    min-width: 150px;
+    text-align: right;
+	width:20%;
+}
+/* @media all and (min-width: 1025px) {
+#main_slider{
+	margin-top:75px;
+} 
+
+} */
+@media all and (max-width: 1400px) {
+#main_slider h2,
+.mainVisualBox h2{
+    top: 50%;
+    left: 50%;
+    width: 70%;
+}
+
+}
+@media all and (max-width: 1024px) {
+
+#main_slider h2,
+.mainVisualBox h2{
+    width: 70%;
+}
+	#main_slider h3,
+.mainVisualBox h3{
+  left: 50%;
+	transform: translate(-50%, -50%);
+}
+	.mainVisualBox .main_icon {
+    width: 30%;
+	max-width:500px;
+    min-width: 150px;
+}
+
+}
+@media all and (max-width: 768px) {
+
+
+.mainVisualBox .main_icon {
+    bottom: 144px;
+    right: 20px;
+    width: 200px;
+}
+
+}
+@media all and (max-width: 550px) {
+#main_slider h2,
+.mainVisualBox h2{
+  top: 40%;
+  left: 50%;
+  font-size: 5vw;
+  width: 90%;
+  transform: translate(-50%, -50%);
+  text-align:center;
+}
+
+#main_slider h3,
+.mainVisualBox h3{
+  top: 40%;
+  left: 50%;
+  font-size: 4vw;
+  width: 80%;
+	transform: translate(-50%, -50%);
+}
+	
+.mainVisualBox .main_icon {
+    bottom: 133px;
+    right: 0px;
+    width: 165px;
+}
+}
+
+
+
+/*==================================================
+
+　top スタッフ用スライダーのためのcss
+
+===================================*/
+.home_staff_slider {/*横幅94%で左右に余白を持たせて中央寄せ*/
+   width:94%;
+    margin:0 auto;
+}
+
+.home_staff_slider img {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
+/*slickのJSで書かれるタグ内、スライド左右の余白調整*/
+
+.home_staff_slider .slick-slide {
+    margin:0 10px;
+}
+
+/*矢印の設定*/
+
+/*戻る、次へ矢印の位置*/
+.slick-prev, 
+.slick-next {
+    position: absolute;/*絶対配置にする*/
+    top: 42%;
+    cursor: pointer;/*マウスカーソルを指マークに*/
+    outline: none;/*クリックをしたら出てくる枠線を消す*/
+    border-top: 2px solid #666;/*矢印の色*/
+    border-right: 2px solid #666;/*矢印の色*/
+    height: 15px;
+    width: 15px;
+}
+
+.slick-prev {/*戻る矢印の位置と形状*/
+    left: -1.5%;
+    transform: rotate(-135deg);
+}
+
+.slick-next {/*次へ矢印の位置と形状*/
+    right: -1.5%;
+    transform: rotate(45deg);
+}
+
+/*ドットナビゲーションの設定*/
+
+.slick-dots {
+    text-align:center;
+	margin:20px 0 0 0;
+}
+
+.slick-dots li {
+    display:inline-block;
+	margin:0 5px;
+}
+
+.slick-dots button {
+    color: transparent;
+    outline: none;
+    width:8px;/*ドットボタンのサイズ*/
+    height:8px;/*ドットボタンのサイズ*/
+    display:block;
+    border-radius:50%;
+    background:#ccc;/*ドットボタンの色*/
+}
+
+.slick-dots .slick-active button{
+    background:#333;/*ドットボタンの現在地表示の色*/
+}
+
+/*==================================================
+
+　top ブログ用スライダーのためのcss
+
+===================================*/
+.home_blog_slider {/*横幅94%で左右に余白を持たせて中央寄せ*/
+   width:94%;
+    margin:0 auto;
+}
+
+.home_blog_slider img {
+    width:100%;/*スライダー内の画像を横幅100%に*/
+    aspect-ratio: 4 / 3;   /* 枠の比率を固定 */
+    object-fit: cover;     /* 枠いっぱいにトリミングして表示 */
+    display: block;        /* 行間の隙間を防ぐ */        
+}
+
+/*slickのJSで書かれるタグ内、スライド左右の余白調整*/
+
+.home_blog_slider .slick-slide {
+    margin:0 10px;
+}
+
+/*==================================================
+
+　Works ワークス用スライダーのためのcss
+
+===================================*/
+
+.works_slider{
+    width:80%;
+    margin:0 auto;
+}
+.works_slider ul.gallery li img {
+    width: 100%;
+    height: 60vh;
+    margin: 0 auto;
+    object-fit:contain;
+}
+.works_slider li.slick-slide img {
+aspect-ratio: 4 / 3;
+object-fit: cover;
+}
+.works_slider ul.gallery li p.works_caption {
+    z-index: 2;
+    position: relative;
+    bottom: 70px;
+    background: rgb(255 255 255 / 60%);
+    padding: 10px;
+    text-align: center;
+}
+
+/*メイン画像下に余白をつける*/
+
+.works_slider .gallery{
+	margin:0 0 5px 0;
+}
+
+.works_slider .gallery li{
+list-style:none;
+}
+
+/*矢印の設定*/
+
+/*戻る、次へ矢印の位置*/
+.works_slider .slick-prev, 
+.works_slider .slick-next {
+    position: absolute;/*絶対配置にする*/
+	z-index: 3;
+    top: 42%;
+    cursor: pointer;/*マウスカーソルを指マークに*/
+    outline: none;/*クリックをしたら出てくる枠線を消す*/
+    border-top: 2px solid #ccc;/*矢印の色*/
+    border-right: 2px solid #ccc;/*矢印の色*/
+    height: 25px;
+    width: 25px;
+}
+
+.works_slider .slick-prev {/*戻る矢印の位置と形状*/
+    left:2.5%;
+    transform: rotate(-135deg);
+}
+
+.works_slider .slick-next {/*次へ矢印の位置と形状*/
+    right:2.5%;
+    transform: rotate(45deg);
+}
+
+/*選択するサムネイル画像の設定*/
+
+.works_slider .choice-btn li{
+	cursor: pointer;
+	outline: none;
+	background:#333;
+	/* width:12.5%!important; */
+list-style:none;
+}
+
+.works_slider .choice-btn li img{
+	opacity: 0.4;/*選択されていないものは透過40%*/
+}
+
+.works_slider .choice-btn li.slick-current img{
+	opacity: 1;/*選択されているものは透過しない*/
+}
+
+.works_slider .choice-btn .slick-track {
+	transform: unset !important;/*画面幅サイズ変更に伴うサムネイル固定*/
+}
+@media all and (max-width:1024px) {
+
+.works_slider ul.gallery li img {
+    height:auto;
+    margin: 0 auto;
+    object-fit: scale-down;
+}
+}
+@media all and (max-width:768px) {
+.works_slider .choice-btn li{
+	width:25%!important;
+}
+}
+
+/*==================================================
+
+　TOPのWorks ワークス用スライダーのためのcss
+
+===================================*/
+
+.top_works_slider{
+    width:80%;
+    margin:0 auto;
+}
+.top_works ul.gallery li img {
+    width: 100%;
+    height: 50vh;
+    margin: 0 auto;
+    object-fit:contain;
+}
+.top_works_slider li.slick-slide img {
+aspect-ratio: 4 / 3;
+object-fit: cover;
+}
+.top_works_slider ul.gallery li p.works_caption {
+    z-index: 2;
+    position: relative;
+    bottom: 70px;
+    background: rgb(255 255 255 / 60%);
+    padding: 10px;
+    text-align: center;
+}
+
+/*メイン画像下に余白をつける*/
+
+.top_works_slider .gallery{
+	margin:0 0 5px 0;
+}
+
+.top_works_slider .gallery li{
+list-style:none;
+}
+
+/*矢印の設定*/
+
+/*戻る、次へ矢印の位置*/
+.top_works_slider .slick-prev, 
+.top_works_slider .slick-next {
+    position: absolute;/*絶対配置にする*/
+	z-index: 3;
+    top: 42%;
+    cursor: pointer;/*マウスカーソルを指マークに*/
+    outline: none;/*クリックをしたら出てくる枠線を消す*/
+    border-top: 2px solid #ccc;/*矢印の色*/
+    border-right: 2px solid #ccc;/*矢印の色*/
+    height: 25px;
+    width: 25px;
+}
+
+.top_works_slider .slick-prev {/*戻る矢印の位置と形状*/
+    left:2.5%;
+    transform: rotate(-135deg);
+}
+
+.top_works_slider .slick-next {/*次へ矢印の位置と形状*/
+    right:2.5%;
+    transform: rotate(45deg);
+}
+
+/*選択するサムネイル画像の設定*/
+
+.top_works_slider .choice-btn li{
+	cursor: pointer;
+	outline: none;
+	background:#333;
+	/*width:12.5%!important;*/
+list-style:none;
+}
+
+.top_works_slider .choice-btn li img{
+	opacity: 0.4;/*選択されていないものは透過40%*/
+}
+
+.top_works_slider .choice-btn li.slick-current img{
+	opacity: 1;/*選択されているものは透過しない*/
+}
+
+.top_works_slider .choice-btn .slick-track {
+	transform: unset !important;/*画面幅サイズ変更に伴うサムネイル固定*/
+}
+@media all and (max-width:1024px) {
+
+.top_works_slider ul.gallery li img {
+    height:auto;
+    margin: 0 auto;
+    object-fit: scale-down;
+}
+}
+/* @media all and (max-width:768px) {
+.top_works_slider .choice-btn li{
+	width:25%!important;
+}
+} */
+
+
+/*==================================================
+
+Plan 内スライダー
+
+===================================*/
+#Plan .plan_slider {
+    position:relative;
+    z-index: 1;
+	/*↑z-indexの値をh1のz-indexの値よりも小さくして背景に回す*/
+    /* height: 100vh; *//*スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
+}
+/*　背景画像設定　*/
+
+/*--フルサイズ--*/
+#Plan .slider-full-item01 {
+	background-image:url(../images/plan/full_d04.jpg);
+}
+
+#Plan .slider-full-item02 {
+    background:url(../images/plan/full_e03.jpg);
+}
+
+#Plan .slider-full-item03 {
+    background:url(../images/plan/full_f04.jpg);
+}
+/*--ハーフサイズ--*/
+#Plan .slider-half-item01 {
+	background-image:url(../images/plan/haif_a04.jpg);
+}
+
+#Plan .slider-half-item02 {
+    background:url(../images/plan/haif_b04.jpg);
+}
+
+#Plan .slider-half-item03 {
+    background:url(../images/plan/haif_c03.jpg);
+}
+
+#Plan .slider-item {
+    width: 100vw;/*各スライダー全体の横幅を画面の高さいっぱい（100%）にする*/
+    height: 40vh;/*各スライダー全体の縦幅  画面の高さいっぱい（100vh）*/
+    background-repeat: no-repeat;/*背景画像をリピートしない*/
+    background-position: center;/*背景画像の位置を中央に*/
+    background-size: cover;/*背景画像が.slider-item全体を覆い表示*/
+}
+@media screen and ( max-width:768px ){
+#Plan .slider-item {
+    width: 100vw;/*各スライダー全体の横幅を画面の高さいっぱい（100%）にする*/
+    height: 40vh;/*各スライダー全体の縦幅  画面の高さいっぱい（100vh）*/
+}
+}
+
+/*矢印の設定*/
+
+/*戻る、次へ矢印の位置*/
+#Plan .slick-prev, 
+#Plan .slick-next {
+    position: absolute;/*絶対配置にする*/
+	z-index: 3;
+    top: 42%;
+    cursor: pointer;/*マウスカーソルを指マークに*/
+    outline: none;/*クリックをしたら出てくる枠線を消す*/
+    border-top: 2px solid #ccc;/*矢印の色*/
+    border-right: 2px solid #ccc;/*矢印の色*/
+    height: 25px;
+    width: 25px;
+}
+
+#Plan .slick-prev {/*戻る矢印の位置と形状*/
+    left:2.5%;
+    transform: rotate(-135deg);
+}
+
+#Plan .slick-next {/*次へ矢印の位置と形状*/
+    right:2.5%;
+    transform: rotate(45deg);
+}
+
+/*ドットナビゲーションの設定*/
+
+#Plan .slick-dots {
+	position: relative;
+	z-index: 3;
+    text-align:center;
+	margin:20px 0 0 0;
+}
+
+#Plan .slick-dots li {
+    display:inline-block;
+	margin:0 5px;
+}
+
+#Plan .slick-dots button {
+    color: transparent;
+    outline: none;
+    width:8px;/*ドットボタンのサイズ*/
+    height:8px;/*ドットボタンのサイズ*/
+    display:block;
+    border-radius:50%;
+    background:#ccc;/*ドットボタンの色*/
+}
+
+#Plan .slick-dots .slick-active button{
+    background:#5f5f5f;/*ドットボタンの現在地表示の色*/
+}
+
+/*==================================================
+
+Planの外観　流れるスライダー
+
+===================================*/
+.exterior_slider img {
+    width:100%;/*スライダー内の画像を横幅100%に*/
+    height:auto;
+    margin: 0 auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    object-position: 50% 50%;
+
+}
+
+/*slickのJSで書かれるタグ内、スライド左右の余白調整*/
+
+.exterior_slider .slick-slide {
+    margin:0 10px;/*スライド左右の余白調整*/
+}
+
+/*==================================================
+
+　　TOP　施工事例スライダー（TRAIL BASE KIYAMA（トレイルベース基山））
+
+===================================*/
+.works_slider_area {
+    width: 87%;
+    margin: 0 auto;
+}
+.works_area .works_ttl_jp{
+    font-size:20px;
+    font-weight:bold;
+    text-align:center;
+    margin:10px auto;
+    
+}
+.works_area dl {
+    width:70%;
+    max-width:330px;
+    margin:5px auto;
+    display:flex;
+}
+.works_area dt {
+    width:70px;
+    text-align:center;
+}
+
+.works_area dd {
+    max-width:260px;
+    text-align:center;
+}
+.top_works_slider {/*元は横幅94%で左右に余白を持たせて中央寄せ*/
+    width:94%;
+    margin:0 auto;
+    z-index: 20;
+}
+
+
+.top_works_slider img {
+	/*width:44vw;*//*スライダー内の画像を60vwにしてレスポンシブ化。左右もう少しみせたいので４４に変更*/
+    width: 100%;
+    height: 400px;
+    margin: 0 auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
+@media screen and (max-width: 468px){
+.top_works_slider img {
+    width:80vw;
+    height:auto;
+}
+.works_area .works_ttl_jp{
+    font-size:18px;    
+}
+}
+
+.top_works_slider .slick-slide {
+	transform: scale(0.8);/*左右の画像のサイズを80%に*/
+	transition: all .5s;/*拡大や透過のアニメーションを0.5秒で行う*/
+	opacity: 0.5;/*透過50%*/
+}
+
+.top_works_slider .slick-slide.slick-center{
+	transform: scale(1);/*中央の画像のサイズだけ等倍に*/
+	opacity: 1;/*透過なし*/
+}
+
+
+/*矢印の設定*/
+
+/*戻る、次へ矢印の位置*/
+.top_works_slider .slick-prev, 
+.top_works_slider .slick-next {
+    position: absolute;/*絶対配置にする*/
+    top: 42%;
+    cursor: pointer;/*マウスカーソルを指マークに*/
+    outline: none;/*クリックをしたら出てくる枠線を消す*/
+    border-top: 2px solid #666;/*矢印の色*/
+    border-right: 2px solid #666;/*矢印の色*/
+    height: 15px;
+    width: 15px;
+}
+
+.top_works_slider .slick-prev {/*戻る矢印の位置と形状*/
+    left: -1.5%;
+    transform: rotate(-135deg);
+}
+
+.top_works_slider .slick-next {/*次へ矢印の位置と形状*/
+    right: -1.5%;
+    transform: rotate(45deg);
+}
+
+/*ドットナビゲーションの設定*/
+
+.top_works_slider .slick-dots {
+	display:none;/*TOPスライダーではボタン表示させない*/
+    text-align:center;
+	margin:20px 0 0 0;
+}
+
+.top_works_slider .slick-dots li {
+    display:inline-block;
+	margin:0 5px;
+}
+
+.top_works_slider .slick-dots button {
+    color: transparent;
+    outline: none;
+    width:8px;/*ドットボタンのサイズ*/
+    height:8px;/*ドットボタンのサイズ*/
+    display:block;
+    /*border-radius:50%;*/
+    background:#ccc;/*ドットボタンの色*/
+}
+
+.top_works_slider .slick-dots .slick-active button{
+    background:#333;/*ドットボタンの現在地表示の色*/
+}
